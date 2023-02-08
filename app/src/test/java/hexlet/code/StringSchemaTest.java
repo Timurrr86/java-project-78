@@ -4,10 +4,10 @@ import hexlet.code.schemas.StringSchema;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class ValidatorTest {
+public class StringSchemaTest {
 
     @Test
-    public void schemaTest() {
+    public void schemaTestRequired() {
         Validator v = new Validator();
         StringSchema schema = v.string();
 
@@ -37,8 +37,11 @@ public class ValidatorTest {
     }
 
     @Test
-    public void schemaTestContains() {
+    public void schemaTestMinLength() {
         Validator v = new Validator();
         StringSchema schema = v.string();
+
+        Assertions.assertTrue(schema.minLength(5).isValid("what does the fox say"));
+        Assertions.assertFalse(schema.minLength(5).isValid("what"));
     }
 }
