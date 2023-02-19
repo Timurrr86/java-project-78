@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 
 public class StringSchemaTest {
 
+
+
     @Test
     public void schemaTestRequired() {
         Validator v = new Validator();
@@ -42,6 +44,7 @@ public class StringSchemaTest {
         StringSchema schema = v.string();
 
         Assertions.assertTrue(schema.minLength(5).isValid("what does the fox say"));
+        System.out.println();
         Assertions.assertFalse(schema.minLength(5).isValid("what"));
     }
 }
