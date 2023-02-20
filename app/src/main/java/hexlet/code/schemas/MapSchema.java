@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class MapSchema extends BaseSchema {
     public MapSchema() {
-        addChecking(x -> x instanceof Map<?,?>);
+        addChecking(x -> x instanceof Map<?, ?>);
     }
 
     public void required() {
