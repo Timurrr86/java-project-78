@@ -7,15 +7,15 @@ public class MapSchema extends BaseSchema {
         addChecking(x -> x instanceof Map<?, ?>);
     }
 
-    public void required() {
+    public final void required() {
         setRequired(true);
     }
 
-    public void sizeof(int count) {
+    public final void sizeof(int count) {
         addChecking(x -> ((Map<?, ?>) x).size() == count);
     }
 
-    public void shape(Map<String, BaseSchema> map) {
+    public final void shape(Map<String, BaseSchema> map) {
         addChecking(x -> {
             for (Map.Entry<String, BaseSchema> entry : map.entrySet()) {
                 String key = entry.getKey();

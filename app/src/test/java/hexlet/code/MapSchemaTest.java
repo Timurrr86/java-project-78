@@ -20,7 +20,7 @@ public class MapSchemaTest {
         schema.required();
 
         Assertions.assertFalse(schema.isValid(null)); // false
-        Assertions.assertTrue(schema.isValid(new HashMap())); // true
+        Assertions.assertTrue(schema.isValid(new HashMap<>())); // true
         Map<String, String> data = new HashMap<>();
         data.put("key1", "value1");
         Assertions.assertTrue(schema.isValid(data)); // true

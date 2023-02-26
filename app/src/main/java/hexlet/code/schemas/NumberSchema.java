@@ -5,16 +5,16 @@ public class NumberSchema extends BaseSchema {
         addChecking(x -> x instanceof Integer);
     }
 
-    public void required() {
+    public final void required() {
         setRequired(true);
     }
 
-    public NumberSchema positive() {
+    public final NumberSchema positive() {
         addChecking(x -> (int) x > 0);
         return this;
     }
 
-    public void range(int lowRange, int hiRange) {
+    public final void range(int lowRange, int hiRange) {
         addChecking(x -> (int) x >= lowRange && (int) x <= hiRange);
     }
 

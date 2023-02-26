@@ -8,15 +8,15 @@ public class BaseSchema {
     private final List<Predicate<Object>> checkings = new ArrayList<>();
     private boolean isRequired = false;
 
-    public void setRequired(boolean required) {
+    public final void setRequired(boolean required) {
         isRequired = required;
     }
 
-    public void addChecking(Predicate<Object> checking) {
+    public final void addChecking(Predicate<Object> checking) {
         checkings.add(checking);
     }
 
-    public boolean isValid(Object object) {
+    public final boolean isValid(Object object) {
         if (object == null) {
             return !isRequired;
         }

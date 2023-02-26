@@ -5,18 +5,18 @@ public class StringSchema extends BaseSchema {
         addChecking(x -> x instanceof String || x == null);
     }
 
-    public StringSchema required() {
+    public final StringSchema required() {
         setRequired(true);
         addChecking(x -> x instanceof String && !x.toString().isEmpty());
         return this;
     }
 
-    public StringSchema minLength(int minLength) {
+    public final StringSchema minLength(int minLength) {
         addChecking(x -> x.toString().length() > minLength);
         return this;
     }
 
-    public StringSchema contains(String string) {
+    public final StringSchema contains(String string) {
         addChecking(x -> x.toString().contains(string));
         return this;
     }
