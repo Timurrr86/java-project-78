@@ -11,7 +11,7 @@ import java.util.Map;
 public class NestedSchemaTest {
 
     @Test
-    public void nestedSchemaTest () {
+    public void nestedSchemaTest() {
         Validator v = new Validator();
 
         MapSchema schema = v.map();
