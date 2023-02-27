@@ -5,10 +5,12 @@
 
 <a href="https://codeclimate.com/github/Timurrr86/java-project-78/test_coverage"><img src="https://api.codeclimate.com/v1/badges/20e6d0f86f941c826ae2/test_coverage" /></a>
 
+# Валидатор данных
+
 Валидатор данных – библиотека, с помощью которой можно проверять корректность любых данных. Подобных библиотек множество в каждом языке, так как практически все программы работают с внешними данными, которые нужно проверять на корректность. В первую очередь речь идет про данные форм заполняемых пользователями. За основу для проекта взята библиотека yup.
 
 Пример использования:
-
+```
 import hexlet.code.Validator;
 import hexlet.code.schemas.StringSchema;
 import hexlet.code.schemas.NumberSchema;
@@ -45,3 +47,4 @@ Map<String, Object> human2 = new HashMap<>();
 human2.put("name", "");
 human2.put("age", null);
 schema.isValid(human1); // false
+```
