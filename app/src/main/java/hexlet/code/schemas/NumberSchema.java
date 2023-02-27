@@ -1,11 +1,9 @@
 package hexlet.code.schemas;
 
 public class NumberSchema extends BaseSchema {
-    public NumberSchema() {
-        addChecking(x -> x instanceof Integer);
-    }
 
     public final void required() {
+        addChecking(x -> x instanceof Integer);
         setRequired(true);
     }
 
