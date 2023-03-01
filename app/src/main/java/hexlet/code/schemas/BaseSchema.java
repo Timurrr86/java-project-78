@@ -8,10 +8,6 @@ public class BaseSchema {
     private final List<Predicate<Object>> checkings = new ArrayList<>();
     private boolean isRequired = false;
 
-    public boolean isRequired() {
-        return isRequired;
-    }
-
     public final void setRequired(boolean required) {
         isRequired = required;
     }
