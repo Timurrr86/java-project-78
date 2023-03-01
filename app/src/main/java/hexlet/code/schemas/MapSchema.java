@@ -3,9 +3,11 @@ package hexlet.code.schemas;
 import java.util.Map;
 
 public class MapSchema extends BaseSchema {
+    public MapSchema() {
+        addChecking(x -> x instanceof Map<?, ?>);
+    }
 
     public final void required() {
-        addChecking(x -> x instanceof Map<?, ?>);
         setRequired(true);
     }
 
