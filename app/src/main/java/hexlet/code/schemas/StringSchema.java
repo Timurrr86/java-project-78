@@ -2,7 +2,7 @@ package hexlet.code.schemas;
 
 public class StringSchema extends BaseSchema {
     public StringSchema() {
-        addChecking(x -> x instanceof String || x == null);
+        addChecking(x -> x instanceof String);
     }
 
     public final StringSchema required() {
