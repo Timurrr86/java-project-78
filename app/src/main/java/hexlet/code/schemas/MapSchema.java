@@ -7,8 +7,9 @@ public class MapSchema extends BaseSchema {
         addChecking(x -> x instanceof Map<?, ?>);
     }
 
-    public final void required() {
+    public final MapSchema required() {
         setRequired(true);
+        return this;
     }
 
     public final void sizeof(int count) {

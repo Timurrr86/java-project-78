@@ -5,8 +5,9 @@ public class NumberSchema extends BaseSchema {
         addChecking(x -> x instanceof Integer);
     }
 
-    public final void required() {
+    public final NumberSchema required() {
         setRequired(true);
+        return this;
     }
 
     public final NumberSchema positive() {
